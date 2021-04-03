@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 /******************************************************************
-* Lviv'2020 // ACM // Boyer–Moore string-search algorithm example *
-*    file: acmhw11.c                                              *
+* Lviv'2020 // ACM // Boyerâ€“Moore string-search algorithm example *
+*    file: acmhw14.c                                              *
 *******************************************************************/
 #include "stdio.h"
 #include "stdlib.h"
@@ -58,7 +58,7 @@ int main(){
 		"Worse than the mutines in the bilboes. Rashly- "
 		"And prais'd be rashness for it-let us know "
 		"Our indiscretion sometimes serves us well ... "
-		; // — Hamlet, Act 5, Scene 2, 4–8
+		; // â€” Hamlet, Act 5, Scene 2, 4â€“8
 
 	search(text, (char*)"let", matchIndexes);
 
