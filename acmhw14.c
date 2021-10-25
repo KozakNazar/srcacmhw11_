@@ -17,7 +17,7 @@
 
 void printMatchIndexes(int * matchIndexes){
 	printf("matchIndexes:\r\n");
-	if (*matchIndexes != ~0) do{
+	if (*matchIndexes != -1) do{
 		printf("%d\r\n", *matchIndexes);
 	} while (*++matchIndexes);
 }
@@ -51,7 +51,7 @@ void search(char *text, char *pattern, int * matchIndexes){
 }
 
 int main(){
-	int matchIndexes[MAX_WORDS] = { ~0 };
+	int matchIndexes[MAX_WORDS] = { -1 };
 	char * text = (char*)
 		"Sir, in my heart there was a kind of fighting "
 		"That would not let me sleep. Methought I lay "
