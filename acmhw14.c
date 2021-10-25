@@ -17,9 +17,9 @@
 
 void printMatchIndexes(int * matchIndexes){
 	printf("matchIndexes:\r\n");
-	for (; *matchIndexes; ++matchIndexes){
+	if (*matchIndexes != ~0) do{
 		printf("%d\r\n", *matchIndexes);
-	}
+	} while (*++matchIndexes);
 }
 
 void badCharHeuristic(char *str, int size, int badchars[CHAR_COUNT]){
@@ -51,7 +51,7 @@ void search(char *text, char *pattern, int * matchIndexes){
 }
 
 int main(){
-	int matchIndexes[MAX_WORDS] = { 0 };
+	int matchIndexes[MAX_WORDS] = { ~0 };
 	char * text = (char*)
 		"Sir, in my heart there was a kind of fighting "
 		"That would not let me sleep. Methought I lay "
