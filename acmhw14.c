@@ -28,10 +28,10 @@ void badCharHeuristic(char *str, int size, int badchars[CHAR_COUNT]){
 	for (index = 0; index < size; badchars[(int)str[index]] = index, ++index);
 }
 
-void limitedSearch(char *text, char *pattern, int * matchIndexes, int textSize){
+void limitedSearch(char *text, int textSize, char *pattern, int patternSize, int * matchIndexes){
 	int scanner;
 	int badchars[CHAR_COUNT];
-	int patternSize = (int)strlen(pattern);
+	//int patternSize = (int)strlen(pattern);
 	//int textSize = (int)strlen(text);
 
 	badCharHeuristic(pattern, patternSize, badchars);
@@ -51,7 +51,7 @@ void limitedSearch(char *text, char *pattern, int * matchIndexes, int textSize){
 }
 
 void search(char* text, char* pattern, int* matchIndexes) {
-	limitedSearch(text, pattern, matchIndexes, (int)strlen(text));
+	limitedSearch(text, (int)strlen(text), pattern, (int)strlen(pattern), matchIndexes);
 }
 
 int main(){
